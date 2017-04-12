@@ -1,0 +1,11 @@
+<div class="lottery-results" id="lotResults">
+  <% x = rand(1..9) %>
+    <% @teams.each do |team| %>
+      <% if team.id == x %>
+        <h1><%= "The #{team.city} #{team.nickname} have won the lottery" %></h1>
+      <% end %>
+    <% end %>
+    <button class="btn btn-primary btn-lg pull-right">
+        <%= link_to 'Play again', results_teams_path %>
+    </button>
+</div>

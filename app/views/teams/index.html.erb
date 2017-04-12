@@ -1,0 +1,10 @@
+<% @teams.each do |team| %>
+  <div class="team-display">
+    <h5><%= "The #{team.city} #{team.nickname} have the number #{team.odds} odds of winning" %></h5>
+  </div>
+<% end %>
+<div class="lottery" >
+  <button class="btn btn-primary btn-lg pull-right">
+      <%= link_to 'Play the lottery', results_teams_path %>
+  </button>
+</div>
